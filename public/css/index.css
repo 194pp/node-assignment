@@ -1,0 +1,181 @@
+/* reset */
+
+* {
+  font-family: 'Lato', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+}
+
+/* generics */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  padding-top: 48px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+p {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 80px;
+}
+
+form > label {
+  margin-top: 8px;
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+form > input {
+  width: 100%;
+  font-size: 20px;
+  border: lightgray 2px solid;
+  border-radius: 2px;
+  transition: all 200ms ease;
+}
+
+form > input:hover,
+form > input:focus {
+  border-color: dodgerblue;
+  color: dodgerblue;
+}
+
+button {
+  margin-top: 12px;
+  border: 2px black solid;
+  border-radius: 2px;
+  background-color: white;
+  color: black;
+  padding: 4px 8px;
+  transition: all 200ms ease;
+}
+
+button:hover {
+  cursor: pointer;
+  border-color: dodgerblue;
+  color: dodgerblue;
+}
+
+a {
+  transition: all 200ms ease;
+}
+
+a:hover {
+  color: dodgerblue;
+}
+
+/* reusable classes */
+
+.google-logo {
+  width: 100%;
+  max-width: 50px;
+  padding-bottom: 8px;
+}
+
+.gray {
+  color: gray;
+}
+
+.group-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: flex-start;
+  gap: 25px 40px;
+  padding: 30px;
+}
+
+.group-item {
+  width: 150px;
+  height: 100px;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px rgba(128, 128, 128, 0.32) solid;
+  border-radius: 5px;
+  transition: all 200ms ease;
+}
+
+.group-item:hover {
+  border-color: dodgerblue;
+}
+
+.group-id {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.group-id:before {
+  content: 'ID: ';
+}
+
+.group-name {
+  font-size: 10px;
+}
+
+.group-bills-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 50px;
+}
+
+.group-bills-container__header {
+  font-weight: bold;
+  width: 100%;
+}
+
+.group-bills-container__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-bills-container__row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 12px;
+  padding: 8px;
+}
+
+.group-bills-container__row > div:nth-child(1) { width: 20%; }
+.group-bills-container__row > div:nth-child(2),
+.group-bills-container__row > div:nth-child(3) { width: 40%; }
+
+.group-bills-container__list > .group-bills-container__row:nth-child(2n - 1) {
+  background-color: rgba(128, 128, 128, 0.17);
+}
