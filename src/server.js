@@ -7,14 +7,14 @@ const port = config.port || 3000;
 const app = express();
 mongoose.connect(config.db);
 
+// middleware
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  console.log('server reached');
-  res.send('bwah');
-});
+// helpers
+const encryptionHelper = require('./utils/encryptionHelper');
 
+// routes
 const registerRoute = require('./routes/registerRoute');
 
 app.use('/register', registerRoute);
