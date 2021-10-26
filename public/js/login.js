@@ -12,8 +12,6 @@ form.onsubmit = (event) => {
     if (data.token) {
       localStorage.setItem('token', data.token);
     }
-    console.log("Message: " + data.message);
-    console.log("Token: " + data.token);
     window.location.href = "http://localhost:3001/groups";
   });
 }
