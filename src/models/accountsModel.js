@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 // const validator = require('validator');
 
-const RegisterSchema = mongoose.Schema({
+const AccountsSchema = mongoose.Schema({
   fullName: {
     type: String,
     required: true
@@ -16,4 +16,4 @@ const RegisterSchema = mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('accounts', RegisterSchema);
+module.exports = mongoose.model('accounts', AccountsSchema);
