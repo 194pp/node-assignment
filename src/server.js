@@ -20,11 +20,15 @@ app.use(express.static('public'))
 // routes
 const registerRoute = require('./routes/registerRoute');
 const loginRoute = require('./routes/loginRoute');
-// TODO: const groupsRoute = require('./routes/groupsRoute');
+const groupsRoute = require('./routes/groupsRoute');
+const checkTokenRoute = require('./routes/checkTokenRoute');
 // TODO: const billsRoute = require('./routes/billsRoute');
 
 app.use('/register', registerRoute);
 app.use('/login', loginRoute);
+app.use('/groups', groupsRoute);
+app.use('/checkToken', checkTokenRoute);
+// TODO: app.use('/bills', billsroute);
 
 app.listen(port);
 console.log('Listening on port ' + port);

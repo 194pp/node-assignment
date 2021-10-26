@@ -62,6 +62,7 @@ form > input {
   border: lightgray 2px solid;
   border-radius: 2px;
   transition: all 200ms ease;
+  padding-left: 3px;
 }
 
 form > input:hover,

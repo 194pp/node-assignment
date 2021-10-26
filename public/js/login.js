@@ -14,7 +14,7 @@ form.onsubmit = (event) => {
     }
     console.log("Message: " + data.message);
     console.log("Token: " + data.token);
-    // window.location.href = "http://localhost:3001/groups";
+    window.location.href = "http://localhost:3001/groups";
   });
 }
 
