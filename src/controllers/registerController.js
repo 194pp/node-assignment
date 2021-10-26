@@ -6,7 +6,6 @@ const createAccount = async (req, res) => {
     if (err) {
       console.error(err);
     } else if (docs.length !== 0){
-      console.log('email already exists!');
       res.send({error: 'Email already exists!'});
     }
     else {

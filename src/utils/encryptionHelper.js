@@ -9,9 +9,9 @@ const encrypt = async (data) => {
 }
 
 const decryptCheck = async (data, hash) => {
-  const result = bcrypt.compare(data, hash);
+  const result = await bcrypt.compare(data, hash);
   console.log(result);
-  return await result;
+  return result;
 }
 
 module.exports = {
