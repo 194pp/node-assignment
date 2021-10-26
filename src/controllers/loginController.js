@@ -15,6 +15,7 @@ const createAccount = async (req, res) => {
         res.send({error: "Password incorrect"});
       } else {
         jwt.generateToken({
+          _id: docs[0]._id,
           email : docs[0].email,
           password: docs[0].password
         }).then(token => res.send({

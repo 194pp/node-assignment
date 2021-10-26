@@ -1,10 +1,10 @@
-const accountsModel = require("../models/accountsModel");
+const accountsModel = require('../models/accountsModel');
 const encryptionHelper = require('../utils/encryptionHelper');
 
 const createAccount = async (req, res) => {
   accountsModel.find({email: req.body.email}, async (err, docs) => {
     if (err) {
-      console.error(err);
+      console.log(err);
     } else if (docs.length !== 0){
       res.send({error: 'Email already exists!'});
     }
