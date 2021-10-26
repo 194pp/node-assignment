@@ -68,7 +68,6 @@ form > input {
 form > input:hover,
 form > input:focus {
   border-color: dodgerblue;
-  color: dodgerblue;
 }
 
 button {
@@ -107,7 +106,7 @@ a:hover {
   color: gray;
 }
 
-.group-item-container {
+#group-item-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -136,7 +135,7 @@ a:hover {
 
 .group-id {
   font-weight: bold;
-  font-size: 13px;
+  font-size: 9px;
 }
 
 .group-id:before {
@@ -144,7 +143,7 @@ a:hover {
 }
 
 .group-name {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .group-bills-container {
@@ -179,4 +178,12 @@ a:hover {
 
 .group-bills-container__list > .group-bills-container__row:nth-child(2n - 1) {
   background-color: rgba(128, 128, 128, 0.17);
+}
+
+.smaller {
+  font-size: 80%;
+}
+
+.money:before {
+  content: '$ ';
 }
