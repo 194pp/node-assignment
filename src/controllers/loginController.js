@@ -1,5 +1,6 @@
 const accountsModel = require("../models/accountsModel");
 const encryptionHelper = require('../utils/encryptionHelper');
+const jwt = require("../utils/jwt");
 
 const createAccount = async (req, res) => {
   accountsModel.find({email: req.body.email}, async (err, docs) => {
@@ -13,10 +14,13 @@ const createAccount = async (req, res) => {
       if (!passwordCheck) {
         res.send({error: "Password incorrect"});
       } else {
-        res.send({message: "Password correct"});
-
-        // TODO: generate session
-
+        jwt.generateToken({
+          email : docs[0].email,
+          password: docs[0].password
+        }).then(token => res.send({
+          message: "success",
+          token: token
+        }));
       }
     }
   });

@@ -15,16 +15,13 @@ app.use(cors());
 app.use(express.json());
 
 // static
-const options = {}
-app.use(express.static('public', options))
-
-
-// helpers
-const encryptionHelper = require('./utils/encryptionHelper');
+app.use(express.static('public'))
 
 // routes
 const registerRoute = require('./routes/registerRoute');
 const loginRoute = require('./routes/loginRoute');
+// TODO: const groupsRoute = require('./routes/groupsRoute');
+// TODO: const billsRoute = require('./routes/billsRoute');
 
 app.use('/register', registerRoute);
 app.use('/login', loginRoute);
