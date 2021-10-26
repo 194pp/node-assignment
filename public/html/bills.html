@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script src="../js/bills.js" defer></script>
   <link rel="stylesheet" href="../css/index.css">
   <title>Bills</title>
 </head>
@@ -22,33 +23,19 @@
           <div>Amount</div>
         </div>
       </div>
-      <div class="group-bills-container__list">
-        <div class="group-bills-container__row">
-          <div>ID</div>
-          <div>Description</div>
-          <div>Amount</div>
-        </div>
-        <div class="group-bills-container__row">
-          <div>ID</div>
-          <div>Description</div>
-          <div>Amount</div>
-        </div>
-        <div class="group-bills-container__row">
-          <div>ID</div>
-          <div>Description</div>
-          <div>Amount</div>
-        </div>
+      <div class="group-bills-container__list" id="bill-row-container">
+<!--      Bill elements here -->
       </div>
     </div>
   </div>
 
-  <form>
+  <form id="new-bill-form">
     <h3>Add bill</h3>
-    <label for="input-groupid">Amount:</label>
-    <input type="text" id="input-groupid">
-    <label for="input-description">Description:</label>
-    <input type="text" id="input-description">
-    <button>Add</button>
+    <label for="new-amount">Amount:</label>
+    <input type="text" min="0" id="new-amount">
+    <label for="new-description">Description:</label>
+    <input type="text" minlength="3" id="new-description">
+    <button type="submit">Add</button>
   </form>
 </main>
 </body>

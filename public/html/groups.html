@@ -15,30 +15,14 @@
 </header>
 <main>
   <h5>Select Your Group</h5>
-  <div class="group-item-container">
-    <div class="group-item">
-      <div class="group-id">5</div>
-      <div class="group-name">Our Trip to New York</div>
-    </div>
-    <div class="group-item">dummy item</div>
-    <div class="group-item">dummy item</div>
-    <div class="group-item">dummy item</div>
-    <div class="group-item">dummy item</div>
-    <div class="group-item">dummy item</div>
-    <div class="group-item">dummy item</div>
-    <div class="group-item">dummy item</div>
-    <div class="group-item">dummy item</div>
-    <div class="group-item">dummy item</div>
-    <div class="group-item">dummy item</div>
-    <div class="group-item">dummy item</div>
-    <div class="group-item">dummy item</div>
-    <div class="group-item">dummy item</div>
+  <div id="group-item-container">
+<!-- Group items-->
   </div>
-  <form>
+  <form id="new-group-form">
     <h3>Add group</h3>
-    <label for="groupid">Group ID:</label>
-    <input type="text" id="groupid">
-    <button>Add</button>
+    <label for="new-group-name">Group name:</label>
+    <input type="text" minlength="3" id="new-group-name">
+    <button type="submit">Add</button>
   </form>
 </main>
 </body>
